@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', 'MonsterController@index');
+Route::resource('monsters', 'MonsterController');
+Route::get('/search', 'MonsterController@search')->name('search');
 
-
-Route::resource('show', 'MonsterController');
